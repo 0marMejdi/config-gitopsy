@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: demo-app
+  name: nestjs-app
   namespace: argocd
 spec:
   project: default  # <-- REQUIRED
   source:
-    repoURL: https://github.com/YOUR_USERNAME/gitops-config
+    repoURL: https://github.com/0marMejdi/config-gitopsy
     path: app
     targetRevision: main
   destination:
-    server: https://kubernetes.default.svc
-    namespace: demo
+    server: https://gitopsy-dns-pefuoklq.hcp.francecentral.azmk8s.io
+    namespace: nest-app
   syncPolicy:
     automated:
       prune: true
