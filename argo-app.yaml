@@ -10,7 +10,7 @@ spec:
     path: app
     targetRevision: main
   destination:
-    server: http://gitopsy-dns-pefuoklq.hcp.francecentral.azmk8s.io
+    server: https://kubernetes.default.svc
     namespace: nest-app
   syncPolicy:
     automated:
